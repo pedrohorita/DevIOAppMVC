@@ -23,7 +23,9 @@ namespace DevIO.UI.Site
                 app.UseDeveloperExceptionPage();
             }
 
+            
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
