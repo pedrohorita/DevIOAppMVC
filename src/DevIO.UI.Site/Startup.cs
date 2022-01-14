@@ -38,9 +38,15 @@ namespace DevIO.UI.Site
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    "areas",
-                    "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                    "AreaProdutos",
+                    "Produtos",
+                    "Produtos/{controller=Cadastro}/{action=Index}/{id?}");
+
+                endpoints.MapAreaControllerRoute(
+                    "AreaVendas",
+                    "Vendas",
+                    "Vendas/{controller=Pedidos}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                     "default", 
